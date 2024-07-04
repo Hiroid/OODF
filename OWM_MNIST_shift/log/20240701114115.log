@@ -1,0 +1,45 @@
+dataset          : mnist
+data_root        : /data0/user/lxguo/Data
+model_name       : owm_fc
+batch_size       : 128
+num_epochs       : 30
+learning_rate    : 0.2
+lambda_loss      : 0.001
+owmfc_alpha_list : [0.9, 0.6]
+owmfc_lambda_list : [0.001, 1.0]
+CL_method        : owm
+num_hidden       : 800
+num_classes      : 11
+num_tasks        : 10
+momentum         : 0.9
+order_list       : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+optimizer_type   : SGD
+clipgrad         : 10.0
+shift            : True
+data_argmt       : True
+print_frequency  : 5
+Device is cuda
+owm_fc(
+  (layer_1): OWM_FC_block(
+    (W): Linear(in_features=784, out_features=800, bias=False)
+    (P): Linear(in_features=784, out_features=784, bias=False)
+  )
+  (afun_1): ReLU()
+  (layer_2): OWM_FC_block(
+    (W): Linear(in_features=800, out_features=11, bias=False)
+    (P): Linear(in_features=800, out_features=800, bias=False)
+  )
+)
+Training task  0
+epoch 5, loss 0.0488, train acc 1.0000, test acc 0.0980, time 0.82 sec
+epoch 10, loss 0.0480, train acc 1.0000, test acc 0.0980, time 0.83 sec
+epoch 15, loss 0.0473, train acc 1.0000, test acc 0.0980, time 0.79 sec
+epoch 20, loss 0.0467, train acc 1.0000, test acc 0.0980, time 0.79 sec
+epoch 25, loss 0.0462, train acc 1.0000, test acc 0.0980, time 0.80 sec
+epoch 30, loss 0.0459, train acc 1.0000, test acc 0.0980, time 0.79 sec
+Traceback (most recent call last):
+  File "/data0/user/lxguo/Code/OODF/OWM_MNIST_shift/main.py", line 67, in <module>
+    main(args)
+  File "/data0/user/lxguo/Code/OODF/OWM_MNIST_shift/main.py", line 49, in main
+    if args.list_eval:
+AttributeError: 'Namespace' object has no attribute 'list_eval'

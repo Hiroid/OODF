@@ -1,0 +1,306 @@
+dataset          : mnist
+data_root        : /data0/user/lxguo/Data
+model_name       : owm_fc
+batch_size       : 128
+num_epochs       : 30
+learning_rate    : 0.2
+lambda_loss      : 0.001
+owmfc_alpha_list : [0.9, 0.6]
+owmfc_lambda_list : [0.001, 1.0]
+CL_method        : owm
+num_hidden       : 800
+num_classes      : 11
+num_tasks        : 10
+momentum         : 0.9
+order_list       : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+optimizer_type   : SGD
+clipgrad         : 10.0
+list_eval        : False
+shift            : True
+data_argmt       : False
+data_perturbation : True
+argmt_perc       : 0.015
+pertur_bound     : 0.125
+print_frequency  : 5
+Device is cuda
+owm_fc(
+  (layer_1): OWM_FC_block(
+    (W): Linear(in_features=784, out_features=800, bias=False)
+    (P): Linear(in_features=784, out_features=784, bias=False)
+  )
+  (afun_1): ReLU()
+  (layer_2): OWM_FC_block(
+    (W): Linear(in_features=800, out_features=11, bias=False)
+    (P): Linear(in_features=800, out_features=800, bias=False)
+  )
+)
+Training task  0
+epoch 5, loss 0.0493, train acc 0.9998, test acc 0.0980, time 1.01 sec
+epoch 10, loss 0.0480, train acc 1.0000, test acc 0.0980, time 1.02 sec
+epoch 15, loss 0.0471, train acc 1.0000, test acc 0.0980, time 0.87 sec
+epoch 20, loss 0.0465, train acc 1.0000, test acc 0.0980, time 0.92 sec
+epoch 25, loss 0.0461, train acc 1.0000, test acc 0.0980, time 1.16 sec
+epoch 30, loss 0.0456, train acc 1.0000, test acc 0.0980, time 1.16 sec
+test acc of task 0 : 1.0000
+test acc of task 0 on it's training set: 1.0000
+test acc of task 1 : 0.0000
+test acc of task 1 on it's training set: 0.0000
+test acc of task 2 : 0.0000
+test acc of task 2 on it's training set: 0.0000
+test acc of task 3 : 0.0000
+test acc of task 3 on it's training set: 0.0000
+test acc of task 4 : 0.0000
+test acc of task 4 on it's training set: 0.0000
+test acc of task 5 : 0.0000
+test acc of task 5 on it's training set: 0.0000
+test acc of task 6 : 0.0000
+test acc of task 6 on it's training set: 0.0000
+test acc of task 7 : 0.0000
+test acc of task 7 on it's training set: 0.0000
+test acc of task 8 : 0.0000
+test acc of task 8 on it's training set: 0.0000
+test acc of task 9 : 0.0000
+test acc of task 9 on it's training set: 0.0000
+Training task  1
+epoch 5, loss 0.0510, train acc 0.9997, test acc 0.2113, time 1.18 sec
+epoch 10, loss 0.0491, train acc 0.9999, test acc 0.2113, time 1.17 sec
+epoch 15, loss 0.0482, train acc 0.9999, test acc 0.2113, time 1.15 sec
+epoch 20, loss 0.0477, train acc 1.0000, test acc 0.2113, time 1.17 sec
+epoch 25, loss 0.0473, train acc 1.0000, test acc 0.2113, time 1.14 sec
+epoch 30, loss 0.0469, train acc 1.0000, test acc 0.2113, time 1.20 sec
+test acc of task 0 : 0.9980
+test acc of task 0 on it's training set: 0.9993
+test acc of task 1 : 1.0000
+test acc of task 1 on it's training set: 1.0000
+test acc of task 2 : 0.0000
+test acc of task 2 on it's training set: 0.0000
+test acc of task 3 : 0.0000
+test acc of task 3 on it's training set: 0.0000
+test acc of task 4 : 0.0000
+test acc of task 4 on it's training set: 0.0000
+test acc of task 5 : 0.0000
+test acc of task 5 on it's training set: 0.0000
+test acc of task 6 : 0.0000
+test acc of task 6 on it's training set: 0.0000
+test acc of task 7 : 0.0000
+test acc of task 7 on it's training set: 0.0000
+test acc of task 8 : 0.0000
+test acc of task 8 on it's training set: 0.0000
+test acc of task 9 : 0.0000
+test acc of task 9 on it's training set: 0.0000
+Training task  2
+epoch 5, loss 0.0906, train acc 0.9919, test acc 0.3118, time 1.18 sec
+epoch 10, loss 0.0668, train acc 0.9980, test acc 0.3120, time 1.13 sec
+epoch 15, loss 0.0609, train acc 0.9993, test acc 0.3123, time 1.16 sec
+epoch 20, loss 0.0585, train acc 0.9995, test acc 0.3121, time 1.23 sec
+epoch 25, loss 0.0571, train acc 0.9998, test acc 0.3122, time 1.32 sec
+epoch 30, loss 0.0564, train acc 0.9998, test acc 0.3122, time 1.26 sec
+test acc of task 0 : 0.9959
+test acc of task 0 on it's training set: 0.9958
+test acc of task 1 : 0.9921
+test acc of task 1 on it's training set: 0.9871
+test acc of task 2 : 0.9884
+test acc of task 2 on it's training set: 0.9998
+test acc of task 3 : 0.0000
+test acc of task 3 on it's training set: 0.0000
+test acc of task 4 : 0.0000
+test acc of task 4 on it's training set: 0.0000
+test acc of task 5 : 0.0000
+test acc of task 5 on it's training set: 0.0000
+test acc of task 6 : 0.0000
+test acc of task 6 on it's training set: 0.0000
+test acc of task 7 : 0.0000
+test acc of task 7 on it's training set: 0.0000
+test acc of task 8 : 0.0000
+test acc of task 8 on it's training set: 0.0000
+test acc of task 9 : 0.0000
+test acc of task 9 on it's training set: 0.0000
+Training task  3
+epoch 5, loss 0.1004, train acc 0.9904, test acc 0.3977, time 1.31 sec
+epoch 10, loss 0.0770, train acc 0.9965, test acc 0.4040, time 1.29 sec
+epoch 15, loss 0.0691, train acc 0.9990, test acc 0.4055, time 1.25 sec
+epoch 20, loss 0.0653, train acc 0.9995, test acc 0.4065, time 1.33 sec
+epoch 25, loss 0.0633, train acc 1.0000, test acc 0.4068, time 1.28 sec
+epoch 30, loss 0.0620, train acc 1.0000, test acc 0.4069, time 1.21 sec
+test acc of task 0 : 0.9969
+test acc of task 0 on it's training set: 0.9948
+test acc of task 1 : 0.9938
+test acc of task 1 on it's training set: 0.9881
+test acc of task 2 : 0.9864
+test acc of task 2 on it's training set: 0.9913
+test acc of task 3 : 0.9366
+test acc of task 3 on it's training set: 1.0000
+test acc of task 4 : 0.0000
+test acc of task 4 on it's training set: 0.0000
+test acc of task 5 : 0.0000
+test acc of task 5 on it's training set: 0.0000
+test acc of task 6 : 0.0000
+test acc of task 6 on it's training set: 0.0000
+test acc of task 7 : 0.0000
+test acc of task 7 on it's training set: 0.0000
+test acc of task 8 : 0.0000
+test acc of task 8 on it's training set: 0.0000
+test acc of task 9 : 0.0000
+test acc of task 9 on it's training set: 0.0000
+Training task  4
+epoch 5, loss 0.1370, train acc 0.9899, test acc 0.5001, time 1.29 sec
+epoch 10, loss 0.0971, train acc 0.9963, test acc 0.4999, time 1.30 sec
+epoch 15, loss 0.0861, train acc 0.9983, test acc 0.4996, time 1.31 sec
+epoch 20, loss 0.0807, train acc 0.9988, test acc 0.4999, time 1.42 sec
+epoch 25, loss 0.0775, train acc 0.9992, test acc 0.4997, time 1.22 sec
+epoch 30, loss 0.0756, train acc 0.9997, test acc 0.4993, time 1.26 sec
+test acc of task 0 : 0.9918
+test acc of task 0 on it's training set: 0.9909
+test acc of task 1 : 0.9930
+test acc of task 1 on it's training set: 0.9826
+test acc of task 2 : 0.9709
+test acc of task 2 on it's training set: 0.9780
+test acc of task 3 : 0.9040
+test acc of task 3 on it's training set: 0.9985
+test acc of task 4 : 0.9969
+test acc of task 4 on it's training set: 0.9997
+test acc of task 5 : 0.0000
+test acc of task 5 on it's training set: 0.0000
+test acc of task 6 : 0.0000
+test acc of task 6 on it's training set: 0.0000
+test acc of task 7 : 0.0000
+test acc of task 7 on it's training set: 0.0000
+test acc of task 8 : 0.0000
+test acc of task 8 on it's training set: 0.0000
+test acc of task 9 : 0.0000
+test acc of task 9 on it's training set: 0.0000
+Training task  5
+epoch 5, loss 0.2384, train acc 0.9648, test acc 0.5718, time 1.24 sec
+epoch 10, loss 0.1244, train acc 0.9902, test acc 0.5663, time 1.24 sec
+epoch 15, loss 0.0985, train acc 0.9971, test acc 0.5628, time 1.30 sec
+epoch 20, loss 0.0883, train acc 0.9984, test acc 0.5610, time 1.36 sec
+epoch 25, loss 0.0829, train acc 0.9991, test acc 0.5594, time 1.21 sec
+epoch 30, loss 0.0798, train acc 0.9996, test acc 0.5581, time 1.22 sec
+test acc of task 0 : 0.9867
+test acc of task 0 on it's training set: 0.9818
+test acc of task 1 : 0.9903
+test acc of task 1 on it's training set: 0.9792
+test acc of task 2 : 0.9603
+test acc of task 2 on it's training set: 0.9738
+test acc of task 3 : 0.6327
+test acc of task 3 on it's training set: 0.9733
+test acc of task 4 : 0.9919
+test acc of task 4 on it's training set: 0.9911
+test acc of task 5 : 0.9933
+test acc of task 5 on it's training set: 0.9998
+test acc of task 6 : 0.0000
+test acc of task 6 on it's training set: 0.0000
+test acc of task 7 : 0.0000
+test acc of task 7 on it's training set: 0.0000
+test acc of task 8 : 0.0000
+test acc of task 8 on it's training set: 0.0000
+test acc of task 9 : 0.0000
+test acc of task 9 on it's training set: 0.0000
+Training task  6
+epoch 5, loss 0.2137, train acc 0.9702, test acc 0.6440, time 1.25 sec
+epoch 10, loss 0.1280, train acc 0.9903, test acc 0.6439, time 1.21 sec
+epoch 15, loss 0.1051, train acc 0.9942, test acc 0.6434, time 1.34 sec
+epoch 20, loss 0.0942, train acc 0.9973, test acc 0.6435, time 1.40 sec
+epoch 25, loss 0.0881, train acc 0.9983, test acc 0.6430, time 1.29 sec
+epoch 30, loss 0.0845, train acc 0.9988, test acc 0.6427, time 1.36 sec
+test acc of task 0 : 0.9837
+test acc of task 0 on it's training set: 0.9818
+test acc of task 1 : 0.9894
+test acc of task 1 on it's training set: 0.9806
+test acc of task 2 : 0.9564
+test acc of task 2 on it's training set: 0.9654
+test acc of task 3 : 0.5921
+test acc of task 3 on it's training set: 0.9685
+test acc of task 4 : 0.9745
+test acc of task 4 on it's training set: 0.9767
+test acc of task 5 : 0.9608
+test acc of task 5 on it's training set: 0.9657
+test acc of task 6 : 0.9823
+test acc of task 6 on it's training set: 0.9990
+test acc of task 7 : 0.0000
+test acc of task 7 on it's training set: 0.0000
+test acc of task 8 : 0.0000
+test acc of task 8 on it's training set: 0.0000
+test acc of task 9 : 0.0000
+test acc of task 9 on it's training set: 0.0000
+Training task  7
+epoch 5, loss 0.2150, train acc 0.9662, test acc 0.7411, time 1.26 sec
+epoch 10, loss 0.1314, train acc 0.9874, test acc 0.7399, time 1.32 sec
+epoch 15, loss 0.1080, train acc 0.9936, test acc 0.7392, time 1.30 sec
+epoch 20, loss 0.0970, train acc 0.9956, test acc 0.7379, time 1.39 sec
+epoch 25, loss 0.0907, train acc 0.9970, test acc 0.7373, time 1.32 sec
+epoch 30, loss 0.0866, train acc 0.9976, test acc 0.7366, time 1.39 sec
+test acc of task 0 : 0.9816
+test acc of task 0 on it's training set: 0.9797
+test acc of task 1 : 0.9877
+test acc of task 1 on it's training set: 0.9783
+test acc of task 2 : 0.9331
+test acc of task 2 on it's training set: 0.9374
+test acc of task 3 : 0.5812
+test acc of task 3 on it's training set: 0.9667
+test acc of task 4 : 0.9521
+test acc of task 4 on it's training set: 0.9579
+test acc of task 5 : 0.9496
+test acc of task 5 on it's training set: 0.9567
+test acc of task 6 : 0.9802
+test acc of task 6 on it's training set: 0.9976
+test acc of task 7 : 0.9844
+test acc of task 7 on it's training set: 0.9976
+test acc of task 8 : 0.0000
+test acc of task 8 on it's training set: 0.0000
+test acc of task 9 : 0.0000
+test acc of task 9 on it's training set: 0.0000
+Training task  8
+epoch 5, loss 0.5998, train acc 0.8681, test acc 0.8168, time 1.41 sec
+epoch 10, loss 0.2616, train acc 0.9598, test acc 0.8177, time 1.43 sec
+epoch 15, loss 0.1841, train acc 0.9817, test acc 0.8150, time 1.27 sec
+epoch 20, loss 0.1507, train acc 0.9907, test acc 0.8125, time 1.41 sec
+epoch 25, loss 0.1327, train acc 0.9944, test acc 0.8104, time 1.40 sec
+epoch 30, loss 0.1215, train acc 0.9966, test acc 0.8081, time 1.34 sec
+test acc of task 0 : 0.9745
+test acc of task 0 on it's training set: 0.9728
+test acc of task 1 : 0.9674
+test acc of task 1 on it's training set: 0.9635
+test acc of task 2 : 0.8963
+test acc of task 2 on it's training set: 0.9137
+test acc of task 3 : 0.4782
+test acc of task 3 on it's training set: 0.9550
+test acc of task 4 : 0.9409
+test acc of task 4 on it's training set: 0.9421
+test acc of task 5 : 0.9271
+test acc of task 5 on it's training set: 0.9402
+test acc of task 6 : 0.9635
+test acc of task 6 on it's training set: 0.9843
+test acc of task 7 : 0.9660
+test acc of task 7 on it's training set: 0.9856
+test acc of task 8 : 0.9784
+test acc of task 8 on it's training set: 0.9969
+test acc of task 9 : 0.0000
+test acc of task 9 on it's training set: 0.0000
+Training task  9
+epoch 5, loss 0.6103, train acc 0.8732, test acc 0.8939, time 1.33 sec
+epoch 10, loss 0.2870, train acc 0.9578, test acc 0.8956, time 1.31 sec
+epoch 15, loss 0.1999, train acc 0.9806, test acc 0.8929, time 1.40 sec
+epoch 20, loss 0.1614, train acc 0.9887, test acc 0.8893, time 1.27 sec
+epoch 25, loss 0.1414, train acc 0.9927, test acc 0.8872, time 1.36 sec
+epoch 30, loss 0.1286, train acc 0.9954, test acc 0.8845, time 1.37 sec
+test acc of task 0 : 0.9735
+test acc of task 0 on it's training set: 0.9667
+test acc of task 1 : 0.9656
+test acc of task 1 on it's training set: 0.9601
+test acc of task 2 : 0.8934
+test acc of task 2 on it's training set: 0.9055
+test acc of task 3 : 0.4614
+test acc of task 3 on it's training set: 0.9481
+test acc of task 4 : 0.8778
+test acc of task 4 on it's training set: 0.8718
+test acc of task 5 : 0.9148
+test acc of task 5 on it's training set: 0.9142
+test acc of task 6 : 0.9614
+test acc of task 6 on it's training set: 0.9777
+test acc of task 7 : 0.8852
+test acc of task 7 on it's training set: 0.8956
+test acc of task 8 : 0.9405
+test acc of task 8 on it's training set: 0.9547
+test acc of task 9 : 0.9732
+test acc of task 9 on it's training set: 0.9953

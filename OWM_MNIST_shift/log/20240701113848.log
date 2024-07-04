@@ -1,0 +1,59 @@
+dataset          : mnist
+data_root        : ../../../data
+model_name       : owm_fc
+batch_size       : 128
+num_epochs       : 30
+learning_rate    : 0.2
+lambda_loss      : 0.001
+owmfc_alpha_list : [0.9, 0.6]
+owmfc_lambda_list : [0.001, 1.0]
+CL_method        : owm
+num_hidden       : 800
+num_classes      : 10
+num_tasks        : 10
+momentum         : 0.9
+order_list       : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+optimizer_type   : SGD
+clipgrad         : 10.0
+shift            : True
+data_argmt       : True
+print_frequency  : 5
+Device is cuda
+Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
+
+Traceback (most recent call last):
+  File "/data0/user/lxguo/Code/OODF/OWM_MNIST_shift/main.py", line 67, in <module>
+    main(args)
+  File "/data0/user/lxguo/Code/OODF/OWM_MNIST_shift/main.py", line 29, in main
+    data_train_list, data_test_list, data_train, data_test = data.mkdataset(args)
+  File "/data0/user/lxguo/Code/OODF/OWM_MNIST_shift/data.py", line 31, in mkdataset
+    data_train = torchvision.datasets.MNIST(root = args.data_root, train = True, download = True, transform = transforms.ToTensor())
+  File "/data0/user/lxguo/.conda/envs/lxguo_base/lib/python3.9/site-packages/torchvision/datasets/mnist.py", line 99, in __init__
+    self.download()
+  File "/data0/user/lxguo/.conda/envs/lxguo_base/lib/python3.9/site-packages/torchvision/datasets/mnist.py", line 187, in download
+    download_and_extract_archive(url, download_root=self.raw_folder, filename=filename, md5=md5)
+  File "/data0/user/lxguo/.conda/envs/lxguo_base/lib/python3.9/site-packages/torchvision/datasets/utils.py", line 434, in download_and_extract_archive
+    download_url(url, download_root, filename, md5)
+  File "/data0/user/lxguo/.conda/envs/lxguo_base/lib/python3.9/site-packages/torchvision/datasets/utils.py", line 134, in download_url
+    url = _get_redirect_url(url, max_hops=max_redirect_hops)
+  File "/data0/user/lxguo/.conda/envs/lxguo_base/lib/python3.9/site-packages/torchvision/datasets/utils.py", line 82, in _get_redirect_url
+    with urllib.request.urlopen(urllib.request.Request(url, headers=headers)) as response:
+  File "/data0/user/lxguo/.conda/envs/lxguo_base/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/data0/user/lxguo/.conda/envs/lxguo_base/lib/python3.9/urllib/request.py", line 517, in open
+    response = self._open(req, data)
+  File "/data0/user/lxguo/.conda/envs/lxguo_base/lib/python3.9/urllib/request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/data0/user/lxguo/.conda/envs/lxguo_base/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/data0/user/lxguo/.conda/envs/lxguo_base/lib/python3.9/urllib/request.py", line 1375, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/data0/user/lxguo/.conda/envs/lxguo_base/lib/python3.9/urllib/request.py", line 1350, in do_open
+    r = h.getresponse()
+  File "/data0/user/lxguo/.conda/envs/lxguo_base/lib/python3.9/http/client.py", line 1377, in getresponse
+    response.begin()
+  File "/data0/user/lxguo/.conda/envs/lxguo_base/lib/python3.9/http/client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "/data0/user/lxguo/.conda/envs/lxguo_base/lib/python3.9/http/client.py", line 289, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
