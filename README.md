@@ -14,8 +14,8 @@ See ```requirements.txt``` or ```README.md``` for the detailed environment in th
 - If an experiment was produced in the paper, it is marked with ✅. Otherwise, it is marked with ❌.
 - See ```run.sh``` for running command in the folder of each method, as well as the shift condition.
 
-|          | OWM |  AOP | iCaRL | DGR | ER | GDumb | DER++ | CN-DPM | 
-| ---------| ------| ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| MNIST | ✅ | ❌ | ✅ | ✅ | ✅ | ❌ | ❌ |
-| CIFAR10 | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ |
-| CIFAR100 | ❌ | ❌ | ✅ | ❌ | ✅ | ✅ | ❌ | ❌ |
+|          | OWM |  AOP | iCaRL | DGR | ER | GDumb | DER++ | CN-DPM | SupSup | 
+| ---------| ------| ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| MNIST | ✅ | ❌ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| CIFAR10 | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| CIFAR100 | ❌ | ❌ | ✅ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ |
