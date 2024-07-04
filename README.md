@@ -1,0 +1,1 @@
+Official Code for "Out-of-distribution forgetting: vulnerability of continual learning to intra-class distribution shift"
